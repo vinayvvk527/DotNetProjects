@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+ @{
+        string user;
+        
+        
+        if(Context.Session.GetString("UserName")!=null)
+        {
+            user = Context.Session.GetString("UserName");
+        }
+        else
+        {
+            user = string.Empty;
+        }
+}
+<div class="text-center">
+    <h1 class="display-4">Welcome To ShopEasy</h1>
+    
+
+
+    <p>@user</p>
+</div>
